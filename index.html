@@ -11,75 +11,40 @@
             box-sizing: border-box;
         }
 
-        .container {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
+        .container, .roadmap-container, .input-container {
+            margin: 10px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         iframe {
             border-radius: 8px;
+            width: 100%;
+            height: auto;
         }
 
-        .description {
-            max-width: 500px;
+        .description, .roadmap-list {
+            text-align: left;
         }
 
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .roadmap-container {
-            position: absolute;
-            top: 250px;
-            left: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        .roadmap-title {
-            font-size: 24px;
+        .title, .roadmap-title, .input-title {
+            font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .roadmap-list {
-            margin: 0;
             padding-left: 20px;
         }
 
         .roadmap-list li {
             margin-bottom: 5px;
-        }
-
-        .input-container {
-            position: absolute;
-            top: 450px;
-            left: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        .input-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
         }
 
         .input-link {
@@ -90,6 +55,24 @@
 
         .input-link:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            .title, .roadmap-title, .input-title {
+                font-size: 18px;
+            }
+
+            .container, .roadmap-container, .input-container {
+                padding: 15px;
+            }
+
+            .input-link {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
